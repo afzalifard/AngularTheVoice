@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h3>Candidate List</h3><br/>
+    <table class="table table-striped">
+       <thead>
+         <tr>
+           <th>name</th>
+           <th>phone</th>
+           <th>activites</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let item of candidateList" >
+           <td>{{item.name}}</td>
+           <td>{{item.phone}}</td>
+           <td><button type="button" class="btn btn-primary" routerLink="/activities/{{item.id}}">show</button><br/></td>
+         </tr>
+       </tbody>
+     </table>
+  </body>
+
+</html>

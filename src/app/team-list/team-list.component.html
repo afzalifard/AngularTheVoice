@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h3>Team List</h3><br/><br/>
+    <input type="text" [(ngModel)]="teamName">
+    <button (click)="search()">search</button>
+    <br/>
+    <table class="table .table-borderless">
+       <thead>
+         <tr>
+           <th>MentorName</th>
+           <th>teamAverage</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let item of teamList" >
+          <td><button type="button" class="btn btn-primary" routerLink="/candidates/{{item.id}}">{{item.name}} Team</button><br/></td>
+          <td>{{item.teamAverage}}</td>
+         </tr>
+       </tbody>
+     </table>
+  </body>
+
+</html>

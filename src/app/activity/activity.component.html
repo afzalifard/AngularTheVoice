@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h3>Activity List</h3><br/>
+<table class="table table-striped">
+   <thead>
+     <tr>
+       <th>SongName</th>
+       <th>PerformanceDate</th>
+       <th>averageScores</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let item of ActivityList" >
+       <td>{{item.song_name}}</td>
+       <td>{{item.date}}</td>
+       <td>{{item.average_scores}}</td>
+     </tr>
+   </tbody>
+ </table>
+
+</body>
+
+</html>
